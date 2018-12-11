@@ -11,22 +11,85 @@ public class Retirement {
 	private double dRequiredIncome;
 	private double dMonthlySSI;
 	
-	//TODO: Build the contructor, getters and setters for the attributes above.
-	
-	public double AmountToSave()
-	{
-		//TODO: Determine the amount to save each month based on TotalAmountSaved, YearsToWork
-		//		and Annual return while working
+
+	/**
+	 * No-arg constructor as per the assignment
+	 */
+	public Retirement() {
 		
-		
-		return 0;
 	}
 	
+	// Getters and Setters for each attribute.
+	public int getiYearsToWork() {
+		return iYearsToWork;
+	}
+
+	public void setiYearsToWork(int iYearsToWork) {
+		this.iYearsToWork = iYearsToWork;
+	}
+
+	public double getdAnnualReturnWorking() {
+		return dAnnualReturnWorking;
+	}
+
+	public void setdAnnualReturnWorking(double dAnnualReturnWorking) {
+		this.dAnnualReturnWorking = dAnnualReturnWorking;
+	}
+
+	public int getiYearsRetired() {
+		return iYearsRetired;
+	}
+
+	public void setiYearsRetired(int iYearsRetired) {
+		this.iYearsRetired = iYearsRetired;
+	}
+
+	public double getdAnnualReturnRetired() {
+		return dAnnualReturnRetired;
+	}
+
+	public void setdAnnualReturnRetired(double dAnnualReturnRetired) {
+		this.dAnnualReturnRetired = dAnnualReturnRetired;
+	}
+
+	public double getdRequiredIncome() {
+		return dRequiredIncome;
+	}
+
+	public void setdRequiredIncome(double dRequiredIncome) {
+		this.dRequiredIncome = dRequiredIncome;
+	}
+
+	public double getdMonthlySSI() {
+		return dMonthlySSI;
+	}
+
+	public void setdMonthlySSI(double dMonthlySSI) {
+		this.dMonthlySSI = dMonthlySSI;
+	}
+	//-------------------- End of Getters and Setters
+
+
+
+	/**
+	 * 
+	 * AmountToSave() - This method determines the amount of money to save per month for retirement.
+	 * 
+	 * @return double payment
+	 */
+	public double AmountToSave()
+	{
+		return FinanceLib.pmt(dAnnualReturnWorking / 12, iYearsToWork * 12, 0, (-1) * TotalAmountSaved(), false);
+	}
+	
+	/**
+	 * 
+	 * TotalAmountSaved() - This method determines the amount of money needed for retirement.
+	 * 
+	 * @return double retirement present-value
+	 */
 	public double TotalAmountSaved()
 	{
-		//	TODO: Determine amount to be saved based on Monthly SSI, Required Income, Annual return during retirement
-		//		and number of years retired.
-		//
-		return 0;
+		return FinanceLib.pv(dAnnualReturnRetired / 12, iYearsRetired * 12, dRequiredIncome - dMonthlySSI, 0, false);
 	}
 }

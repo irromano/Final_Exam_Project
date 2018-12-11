@@ -5,4 +5,4 @@
  * @author Dad
  *
  */
-package pkgEmpty;
+package pkgCoreTest;
