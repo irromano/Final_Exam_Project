@@ -22,7 +22,7 @@ public class Retirement_Test {
 		ret.setdRequiredIncome(-10000);
 		ret.setdMonthlySSI(-2642);
 		
-		assertEquals(dExpectedPV, ret.TotalAmountSaved(), 0.01);
+		assertEquals(dExpectedPV, ret.TotalAmountSaved(), 0.01); 
 		assertEquals(dExpectedtoSave, ret.AmountToSave(), 0.01);
 	}
 
