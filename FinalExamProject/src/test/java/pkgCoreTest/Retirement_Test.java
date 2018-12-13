@@ -16,9 +16,9 @@ public class Retirement_Test {
 		
 		Retirement ret = new Retirement();
 		ret.setiYearsToWork(40);
-		ret.setdAnnualReturnWorking(0.07);
+		ret.setdAnnualReturnWorking(7);
 		ret.setiYearsRetired(20);
-		ret.setdAnnualReturnRetired(0.02);
+		ret.setdAnnualReturnRetired(2);
 		ret.setdRequiredIncome(-10000);
 		ret.setdMonthlySSI(-2642);
 		

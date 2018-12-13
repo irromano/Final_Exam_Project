@@ -103,7 +103,7 @@ public class RetirementController implements Initializable {
 		}
 		//Verify annual return is a valid number. If it is, plug it in the equation. Else, pop-up warning.
 		try {
-	        if (Double.parseDouble(txtAnnualReturn.getText()) >= 0.0 && Double.parseDouble(txtAnnualReturn.getText()) <= 0.20) {
+	        if (Double.parseDouble(txtAnnualReturn.getText()) >= 0.0 && Double.parseDouble(txtAnnualReturn.getText()) <= 20) {
 	    			double annualReturn = Double.parseDouble(txtAnnualReturn.getText());
 	    			ret.setdAnnualReturnWorking(annualReturn);
 	        } else {
@@ -149,7 +149,7 @@ public class RetirementController implements Initializable {
 		}
 		//Verify annual return retired is a valid number. If it is, plug it in the equation. Else, pop-up warning.
 		try {
-	        if (Double.parseDouble(txtAnnualReturnRetired.getText()) >= 0.0 && Double.parseDouble(txtAnnualReturnRetired.getText()) <= 0.03) {
+	        if (Double.parseDouble(txtAnnualReturnRetired.getText()) >= 0.0 && Double.parseDouble(txtAnnualReturnRetired.getText()) <= 3) {
 	    			double annualReturnRetired = Double.parseDouble(txtAnnualReturnRetired.getText());
 	    			ret.setdAnnualReturnRetired(annualReturnRetired);
 	        } else {

@@ -31,9 +31,9 @@ public class Retirement {
 	public double getdAnnualReturnWorking() {
 		return dAnnualReturnWorking;
 	}
-
+	//Converts a whole percentage number into a decimal
 	public void setdAnnualReturnWorking(double dAnnualReturnWorking) {
-		this.dAnnualReturnWorking = dAnnualReturnWorking;
+		this.dAnnualReturnWorking = dAnnualReturnWorking * 0.01;
 	}
 
 	public int getiYearsRetired() {
@@ -47,9 +47,9 @@ public class Retirement {
 	public double getdAnnualReturnRetired() {
 		return dAnnualReturnRetired;
 	}
-
+	//Converts a whole percentage number into a decimal
 	public void setdAnnualReturnRetired(double dAnnualReturnRetired) {
-		this.dAnnualReturnRetired = dAnnualReturnRetired;
+		this.dAnnualReturnRetired = dAnnualReturnRetired * 0.01;
 	}
 
 	public double getdRequiredIncome() {
